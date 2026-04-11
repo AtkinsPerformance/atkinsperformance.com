@@ -1,0 +1,12 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "atkins-preview",
+      "runtimeExecutable": "serve",
+      "runtimeArgs": ["."],
+      "port": 3456,
+      "autoPort": true
+    }
+  ]
+}

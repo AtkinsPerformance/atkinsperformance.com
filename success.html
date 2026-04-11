@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>You're In! | Atkins Performance</title>
+  <meta name="description" content="Payment confirmed. Welcome to Atkins Performance." />
+  <!-- Security headers -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src https://api.web3forms.com; frame-ancestors 'none';" />
+  <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <link rel="icon" type="image/png" href="assets/logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,600;0,700;0,800;0,900;1,700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    html, body {
+      background: var(--black);
+    }
+    .success-page {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--black);
+      padding: 80px 24px;
+    }
+    .success-card {
+      max-width: 560px;
+      width: 100%;
+      text-align: center;
+    }
+    .success-icon {
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      background: var(--accent);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 32px;
+    }
+    .success-icon svg {
+      color: #fff;
+    }
+    .success-card h1 {
+      color: #fff;
+      font-size: clamp(2rem, 5vw, 3rem);
+      margin-bottom: 16px;
+    }
+    .success-card p {
+      color: rgba(255,255,255,.55);
+      font-size: 1.0625rem;
+      line-height: 1.7;
+      margin-bottom: 12px;
+    }
+    .success-steps {
+      margin: 36px 0;
+      text-align: left;
+      background: rgba(255,255,255,.04);
+      border: 1px solid var(--border-dark);
+      border-radius: var(--radius-lg);
+      padding: 28px 32px;
+    }
+    .success-step {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+      padding: 12px 0;
+      border-bottom: 1px solid rgba(255,255,255,.05);
+    }
+    .success-step:last-child { border-bottom: none; }
+    .success-step__num {
+      flex-shrink: 0;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: var(--accent);
+      color: #fff;
+      font-size: .8rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .success-step__text {
+      padding-top: 3px;
+    }
+    .success-step__text strong {
+      display: block;
+      color: #fff;
+      font-size: .9375rem;
+      margin-bottom: 3px;
+    }
+    .success-step__text span {
+      color: rgba(255,255,255,.45);
+      font-size: .875rem;
+    }
+    .success-actions {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+  </style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="container">
+    <div class="nav__inner">
+      <a class="nav__logo" href="index.html"><img src="assets/logo.png" alt="Atkins Performance" /></a>
+      <ul class="nav__links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+      </ul>
+      <a class="btn btn--primary btn--sm nav__cta" href="signup.html">Get Started</a>
+      <button class="nav__hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+<nav class="nav__mobile">
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="services.html">Services</a>
+  <a href="pricing.html">Pricing</a>
+  <a class="btn btn--primary" href="signup.html">Get Started</a>
+</nav>
+
+<div class="success-page">
+  <div class="success-card">
+
+    <div class="success-icon">
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+    </div>
+
+    <h1 class="display-lg">You're In.</h1>
+    <p>Payment confirmed. Welcome to Atkins Performance — your programme is being built.</p>
+
+    <div class="success-steps">
+      <div class="success-step">
+        <div class="success-step__num">1</div>
+        <div class="success-step__text">
+          <strong>Check your email</strong>
+          <span>A payment receipt from Stripe is on its way. Keep it for your records.</span>
+        </div>
+      </div>
+      <div class="success-step">
+        <div class="success-step__num">2</div>
+        <div class="success-step__text">
+          <strong>Alan will be in touch within 24 hours</strong>
+          <span>He'll message you on WhatsApp to confirm your details and discuss your programme.</span>
+        </div>
+      </div>
+      <div class="success-step">
+        <div class="success-step__num">3</div>
+        <div class="success-step__text">
+          <strong>Set up TrainHeroic</strong>
+          <span>You'll receive a link to download the app and join your coaching team.</span>
+        </div>
+      </div>
+      <div class="success-step">
+        <div class="success-step__num">4</div>
+        <div class="success-step__text">
+          <strong>Start training</strong>
+          <span>Your first week's programme will be live in TrainHeroic, ready to go.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="success-actions">
+      <a class="btn btn--primary btn--large" href="index.html">Back to Home</a>
+      <a class="btn btn--outline btn--large" href="mailto:alan@atkinsperformance.com">Email Alan</a>
+    </div>
+
+  </div>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>
