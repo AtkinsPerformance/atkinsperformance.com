@@ -9,6 +9,14 @@ const STRIPE_LINKS = {
   '12-months':'https://buy.stripe.com/9B6fZh2cNa0Tgm9fova7C02',
 };
 
+/* ── EmailJS config ─────────────────────────────────────────── */
+const EJS = {
+  publicKey:  '4g4T_HAzelIKYcJeC',
+  serviceId:  'service_bmd3ium',
+  templateId: 'template_j3zt2rb',
+};
+if (typeof emailjs !== 'undefined') emailjs.init({ publicKey: EJS.publicKey });
+
 /* ── Web3Forms key (split to deter automated scrapers) ─────────
    Real security: set domain restriction in your Web3Forms
    dashboard → Settings → Allowed Domains → atkinsperformance.com
@@ -330,6 +338,16 @@ document.addEventListener('DOMContentLoaded', () => {
         RATE.record(); // log submission timestamp
 
         await fetch('https://api.web3forms.com/submit', { method: 'POST', body: clean });
+
+        // Send confirmation email to client via EmailJS
+        if (email && typeof emailjs !== 'undefined') {
+          await emailjs.send(EJS.serviceId, EJS.templateId, {
+            email:      email,
+            first_name: name.split(' ')[0] || 'there',
+            full_name:  name,
+            plan:       plan,
+          });
+        }
       } catch (err) {
         // Silent fail — still redirect to Stripe
       }
